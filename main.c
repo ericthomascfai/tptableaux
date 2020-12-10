@@ -69,7 +69,21 @@ void tricroissant() {
 }
 
 void tridecroissant() {
-
+    int borne=10;
+    bool tri=false;
+    while(tri==false)
+    {
+        tri=true;
+        for(int i=0;i<borne-1;i++)
+        {
+            if(itab[i]<itab[i+1])
+            {
+                echanger(i,i+1);
+                tri=false;
+            }
+        }
+        borne--;
+    }
 }
 
 void echanger(int indice1, int indice2) {
